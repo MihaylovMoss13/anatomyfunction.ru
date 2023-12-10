@@ -1,0 +1,107 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+* {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar:horizontal {
+        height: 9px;
+        width: 9px;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track:horizontal {
+        border-radius: 20px;
+        background: #FFF;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:horizontal {
+        background-color: #707;
+        border-radius: 20px;
+        border: 0px solid #FFF;
+    }
+}
+
+body {
+    background: linear-gradient(180deg, #FFF 0%, rgba(73, 29, 74, 0.95) 58.78%) no-repeat;
+    font-family: 'Play', sans-serif;
+    min-height: 100vh;
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar:horizontal {
+        height: 5px;
+        width: 9px;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track:horizontal {
+        background: #FFF;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:horizontal {
+        background-color: #707;
+        border-radius: 20px;
+        border: 2px solid #FFF;
+    }
+}
+
+a {
+    &.text-animate {
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background-color: #000000;
+            transition: width 0.5s;
+        }
+
+        &:hover:after {
+            content: "";
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 1px;
+            transition: width 0.5s;
+            background-color: #cc0000;
+        }
+    }
+}
+
+.fade {
+    &-enter {
+        &-from {
+            opacity: 0;
+        }
+
+        &-to {
+            opacity: 1;
+        }
+
+        &-active {
+            transition: .3s ease all;
+        }
+    }
+
+    &-leave {
+        &-from {
+            opacity: 1;
+        }
+
+        &-to {
+            opacity: 0;
+        }
+
+        &-active {
+            transition: .3s ease all;
+        }
+    }
+}
