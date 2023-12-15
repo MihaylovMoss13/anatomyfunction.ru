@@ -20,3 +20,5 @@ yarn-error.log
 /resources/.DS_Store
 /resources/js/.DS_Store
 /tests/.DS_Store
+/public/sections
+/public/models
