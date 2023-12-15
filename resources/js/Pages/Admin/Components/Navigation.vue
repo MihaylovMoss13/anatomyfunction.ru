@@ -7,7 +7,7 @@ const isDark = useDark();
 const toggleDark = useToggle(isDark);
 import { Sunny, Moon } from '@element-plus/icons-vue'
 
-const svgClasses = 'w-12 md:w-12 2xl:w-24';
+const svgClasses = 'w-12 md:w-12 2xl:w-22';
 </script>
 
 <template>
