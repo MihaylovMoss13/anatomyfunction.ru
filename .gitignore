@@ -22,3 +22,4 @@ yarn-error.log
 /tests/.DS_Store
 /public/sections
 /public/models
+.env
