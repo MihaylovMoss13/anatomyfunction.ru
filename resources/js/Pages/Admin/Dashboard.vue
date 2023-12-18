@@ -1,6 +1,7 @@
 <script setup>
 import {computed} from "vue";
 import {usePage} from "@inertiajs/vue3";
+import { Head, Link, useForm } from '@inertiajs/vue3';
 import AdminLayout from "@/Layouts/AdminLayout.vue";
 
 defineProps({
@@ -10,7 +11,8 @@ defineProps({
 
 <template>
     <AdminLayout>
-        <Head title="Admin Dashboard" />
+        <Head title="Панель управления" />
+
         <div class="flex-1 px-4 mt-10">
             <div class="mb-6 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
                 <!-- Time On-Site -->

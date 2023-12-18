@@ -11,7 +11,7 @@ defineProps({
 
 <template>
     <AdminLayout>
-            <Head title="Анатомия" />
+            <Head title="Часть тела" />
 
             <SectionList :sections="sections"  :brands="brands"></SectionList>
     </AdminLayout>

@@ -433,7 +433,7 @@ const handleLegClick = tab => selectedTabLeg.value = tab;
                                                     только модели формата.glb
                                                 </div>
                                                 <p v-if="model3DLegBedrTreug !== null" class="el-upload__tip">
-                                                    Загружен файл - {{ model3DLegBedrTreug }}
+                                                    Загружен файл - {{ model3DLegBedrTreug.name }}
                                                 </p>
                                                 <p v-else>Файл не загружен</p>
                                             </template>
@@ -469,8 +469,8 @@ const handleLegClick = tab => selectedTabLeg.value = tab;
                                                 <div class="el-upload__tip">
                                                     только модели формата.glb
                                                 </div>
-                                                <p v-if="model3DLegBedrTreug.length > 0" class="el-upload__tip">
-                                                    Загружен файл - {{ model3DLegPodkolYamk }}
+                                                <p v-if="model3DLegPodkolYamk !== null" class="el-upload__tip">
+                                                    Загружен файл - {{ model3DLegPodkolYamk.name }}
                                                 </p>
                                                 <p v-else>Файл не загружен</p>
                                             </template>
@@ -506,8 +506,8 @@ const handleLegClick = tab => selectedTabLeg.value = tab;
                                                 <div class="el-upload__tip">
                                                     только модели формата.glb
                                                 </div>
-                                                <p v-if="model3DLegBedrTreug.length > 0" class="el-upload__tip">
-                                                    Загружен файл - {{ model3DLegGoleni }}
+                                                <p v-if="model3DLegGoleni !== null" class="el-upload__tip">
+                                                    Загружен файл - {{ model3DLegGoleni.name }}
                                                 </p>
                                                 <p v-else>Файл не загружен</p>
                                             </template>
@@ -718,9 +718,9 @@ const handleLegClick = tab => selectedTabLeg.value = tab;
                                         </li>
                                     </ul>
                                     <ul v-if="section.name === 'Нога'">
-                                        <p class="flex gap-1">1. <span>{{ section.model_3D_leg_bedr_treug }}</span></p>
-                                        <p class="flex gap-1">2. <span>{{ section.model_3D_leg_podkol_yamk }}</span></p>
-                                        <p class="flex gap-1">3. <span>{{ section.model_3D_leg_goleni }}</span></p>
+                                        <p v-if="section.model_3D_leg_bedr_treug" class="flex gap-1">1. <span>{{ section.model_3D_leg_bedr_treug }}</span></p>
+                                        <p v-if="section.model_3D_leg_podkol_yamk" class="flex gap-1">2. <span>{{ section.model_3D_leg_podkol_yamk }}</span></p>
+                                        <p v-if="section.model_3D_leg_goleni" class="flex gap-1">3. <span>{{ section.model_3D_leg_goleni }}</span></p>
                                     </ul>
                                 </td>
 
